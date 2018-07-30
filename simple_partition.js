@@ -35,9 +35,11 @@ function partition(arr, start, end, pivot_idx, cb)
 
 
 if (require.main === module) {
-    arr = [ 3,5,67, 8, 9,1,2,40];
-    var pivot = arr.length/2;
+    //arr = [3,5,67, 8, 9,1,2,40];
+    arr = [3];
+    var pivot = parseInt(arr.length/2);
 
+    print(" Pivot " + pivot);
     print("Pivot element is " + arr[pivot]);
 
     partition(arr, 0, arr.length-1,

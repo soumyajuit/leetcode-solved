@@ -33,6 +33,15 @@ function partition(arr, start, end, pivot_idx, cb)
     return cb(arr);
 }
 
+function
+k-th-largest(arr, start, end, k)
+{
+
+    var pivot = start + (end - start)/2 ;
+
+
+}
+
 
 if (require.main === module) {
     arr = [ 3,5,67, 8, 9,1,2,40];
@@ -40,7 +49,27 @@ if (require.main === module) {
 
     print("Pivot element is " + arr[pivot]);
 
+    /*
     partition(arr, 0, arr.length-1,
               pivot, function (arr) {
                         _.each( arr, function (elem) { print(elem + " "); })});
+    */
+
+    arr.sort((elem1, elem2) =>
+                    {
+                        if (elem1 > elem2) {
+                            return 1;
+                        } 
+
+                        if (elem1 < elem2) {
+                            return -1;
+                        }
+
+                        return 0;
+
+                        });
+
+    _.each(arr, function(elem) { print(elem + " "); });
+
 }
+
